@@ -1,0 +1,40 @@
+﻿@page
+@model CRUD_Entity_Framework.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EmpRegistration</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpRegistration.Empname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmpRegistration.Empname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpRegistration.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmpRegistration.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpRegistration.Salary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmpRegistration.Salary)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="EmpRegistration.Empid" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
